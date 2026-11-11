@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PortXFolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <a href="#home" class="logo"><span class="grad-text">PortX</span>Folio</a>
+  <nav id="nav">
+    <a href="#home" class="active">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
+    <a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+  </nav>
+  <div style="display:flex;gap:10px;align-items:center">
+    <button class="btn" id="openChat">🤖 <span class="lbl">AI Assistant</span></button>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section id="home">
+    <h1>Hi, I'm <span class="grad-text" id="heroName"></span></h1>
+    <p class="lead" id="heroTagline"></p>
+    <div class="hero-actions">
+      <a class="btn" href="#projects">View my work</a>
+      <a class="btn ghost" href="#contact">Get in touch</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="title">About <span class="grad-text">Me</span></h2>
+    <div class="about">
+      <div id="aboutText"></div>
+      <div class="stats" id="stats"></div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 class="title">Technical <span class="grad-text">Skills</span></h2>
+    <div class="skills" id="skillsGrid"></div>
+  </section>
+
+  <section id="projects">
+    <h2 class="title">Featured <span class="grad-text">Projects</span></h2>
+    <div class="projects" id="projectsGrid"></div>
+  </section>
+
+  <section id="experience">
+    <h2 class="title">Experience &amp; <span class="grad-text">Education</span></h2>
+    <div class="timeline" id="timeline"></div>
+  </section>
+
+  <section id="contact">
+    <h2 class="title">Let's <span class="grad-text">Talk</span></h2>
+    <form class="contact" id="contactForm">
+      <input name="name" placeholder="Your name" required>
+      <input name="email" type="email" placeholder="Your email" required>
+      <textarea name="msg" placeholder="Your message" required></textarea>
+      <button class="btn" type="submit" style="justify-content:center">Send message</button>
+    </form>
+    <div class="socials" id="socials"></div>
+  </section>
+</main>
+<footer id="footer"></footer>
+
+<!-- AI ASSISTANT -->
+<div id="chat" role="dialog" aria-label="Portfolio AI Assistant">
+  <div class="chat-head">
+    <div class="avatar">🤖</div>
+    <div><b>Portfolio AI Assistant</b><small>● Online</small></div>
+    <button id="closeChat" aria-label="Close chat">×</button>
+  </div>
+  <div id="msgs" aria-live="polite"></div>
+  <div class="chips" id="chips"></div>
+  <form class="chat-in" id="chatForm">
+    <input id="chatInput" placeholder="Ask me anything..." autocomplete="off">
+    <button type="submit" aria-label="Send">➤</button>
+  </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
